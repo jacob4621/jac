@@ -1,4 +1,5 @@
-from turtle import *
+import turtle
+import time
 
 jac = Turtle()
 jac.forward(100)
@@ -8,27 +9,43 @@ jac.forward(100)
 class RaceTurtle:
     def __init__(self, speed,turnDelay,name):
         self.name = name
-        self.turt = Turtle()
-        self.speed = 20 * ( 1 + (speed/100))
+        self.turt = turtle.Turtle()
+        self.speed = speed
         self.turnDelay = 0 + turnDelay
 
+    def getX(self):
+        return self.turt.xcor()
 
+    def getY(self):
+        return self.turt.ycor()
+    
     def forward(self, distance):
-        """moves the turtle forward speed * distance"""
+        self.turt.forward(1)
 
-        self.turt.forward(distance * self.speed)
+    def
 
+    def runRace( rt ):
+        time.clock()
+        startTime = time.clock()
+        leg1distance = 100 * (1 - rt.speed/100)
+
+        for i in range(leg1distance):
+            rt.forward()
 
 racerone = RaceTurtle ( 0, 0, "racer one")
 eugene = RaceTurtle(15, 500, "eugene 'the machine' topps")
 
-while True:
-    racerone.forward(1)
-    eugene.forward(1)
+eugene.turt.penup()
+eugene.turt.sety( 150)
+eugene.turt.pendown()
 
-    if racerone.turt.x > 100:
-        print(racerone.name, "wins")
-        break
-    if eugene.turt.xcor() > 100:
-        print(eugene.name, "wins")
-        break
+#while True:
+    #racerone.forward(1)
+    #eugene.forward(1)
+
+   # if racerone.turt.x > 100:
+        #print(racerone.name, "wins")
+       # break
+   # if eugene.turt.xcor() > 100:
+        #print(eugene.name, "wins")
+       # break
