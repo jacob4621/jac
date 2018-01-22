@@ -1,0 +1,17 @@
+1 def main():
+2     maxAmount = 100
+3     theAmount = [14,6,9,7,8,10,3,9]
+4     x = 0
+5     y = 0
+6     for J in range(len(theAmount)):
+7         apples = 100/theAmount[J]
+8         if(J<7):
+9             cash = (apples)*(theAmount[J+1])
+10             x = cash
+11             if x > y:
+12                 y = x
+13                 S = theAmount[J]
+14                 A = theAmount[J+1]
+15             print(cash)
+16     print("the better profit major is :" , y,", by purchasing at ",S,"and selling at ",A,".")
+17 main()       
